@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "My blog",
+    "section": "",
+    "text": "Hello World!\n\n\n\nLaTeX\n\n\nYouTube\n\n\n\nThis is my first blog post!\n\n\n\nA. Solomon Kurz\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSecond blog\n\n\n\nR\n\n\ncode\n\n\npersonality\n\n\n\nIn my second blog post, I’ll make a plot.\n\n\n\nA. Solomon Kurz\n\n\nApr 1, 2025\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/2025-03-31-hello-world/index.html",
+    "href": "blog/2025-03-31-hello-world/index.html",
+    "title": "Hello World!",
+    "section": "",
+    "text": "This is my first blog post! 🎉\nIt has a section header:"
+  },
+  {
+    "objectID": "blog/2025-03-31-hello-world/index.html#this-is-a-section-header",
+    "href": "blog/2025-03-31-hello-world/index.html#this-is-a-section-header",
+    "title": "Hello World!",
+    "section": "This is a section header",
+    "text": "This is a section header\nIt has equations:\n\\[y = mx + b\\]\nIt has a hyperlink.\nIt has an embedded YouTube video.\n\n\n\n\n\n\n\n\n\nAnd it even has an image imported from a .jpg file.\n\n\n\nFigure 1. Solomon at 3"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "A. Solomon Kurz",
@@ -7,10 +28,38 @@
     "text": "Welcome to my website."
   },
   {
+    "objectID": "blog/2025-04-01-second-blog/index.html",
+    "href": "blog/2025-04-01-second-blog/index.html",
+    "title": "Second blog",
+    "section": "",
+    "text": "In this second blog post, I’ll make a figure in R.\n\n\nLoad the tidyverse package for data wrangling, and the psych package for the data.\n\nlibrary(tidyverse)\nlibrary(psych)\n\nWe’ll use the bfi data set from the psych package. We can look at those data with the glimpse() function.\n\nglimpse(bfi)\n\nRows: 2,800\nColumns: 28\n$ A1        &lt;int&gt; 2, 2, 5, 4, 2, 6, 2, 4, 4, 2, 4, 2, 5, 5, 4, 4, 4, 5, 4, 4, …\n$ A2        &lt;int&gt; 4, 4, 4, 4, 3, 6, 5, 3, 3, 5, 4, 5, 5, 5, 5, 3, 6, 5, 4, 4, …\n$ A3        &lt;int&gt; 3, 5, 5, 6, 3, 5, 5, 1, 6, 6, 5, 5, 5, 5, 2, 6, 6, 5, 5, 6, …\n$ A4        &lt;int&gt; 4, 2, 4, 5, 4, 6, 3, 5, 3, 6, 6, 5, 6, 6, 2, 6, 2, 4, 4, 5, …\n$ A5        &lt;int&gt; 4, 5, 4, 5, 5, 5, 5, 1, 3, 5, 5, 5, 4, 6, 1, 3, 5, 5, 3, 5, …\n$ C1        &lt;int&gt; 2, 5, 4, 4, 4, 6, 5, 3, 6, 6, 4, 5, 5, 4, 5, 5, 4, 5, 5, 1, …\n$ C2        &lt;int&gt; 3, 4, 5, 4, 4, 6, 4, 2, 6, 5, 3, 4, 4, 4, 5, 5, 4, 5, 4, 1, …\n$ C3        &lt;int&gt; 3, 4, 4, 3, 5, 6, 4, 4, 3, 6, 5, 5, 3, 4, 5, 5, 4, 5, 5, 1, …\n$ C4        &lt;int&gt; 4, 3, 2, 5, 3, 1, 2, 2, 4, 2, 3, 4, 2, 2, 2, 3, 4, 4, 4, 5, …\n$ C5        &lt;int&gt; 4, 4, 5, 5, 2, 3, 3, 4, 5, 1, 2, 5, 2, 1, 2, 5, 4, 3, 6, 6, …\n$ E1        &lt;int&gt; 3, 1, 2, 5, 2, 2, 4, 3, 5, 2, 1, 3, 3, 2, 3, 1, 1, 2, 1, 1, …\n$ E2        &lt;int&gt; 3, 1, 4, 3, 2, 1, 3, 6, 3, 2, 3, 3, 3, 2, 4, 1, 2, 2, 2, 1, …\n$ E3        &lt;int&gt; 3, 6, 4, 4, 5, 6, 4, 4, NA, 4, 2, 4, 3, 4, 3, 6, 5, 4, 4, 4,…\n$ E4        &lt;int&gt; 4, 4, 4, 4, 4, 5, 5, 2, 4, 5, 5, 5, 2, 6, 6, 6, 5, 6, 5, 5, …\n$ E5        &lt;int&gt; 4, 3, 5, 4, 5, 6, 5, 1, 3, 5, 4, 4, 4, 5, 5, 4, 5, 6, 5, 6, …\n$ N1        &lt;int&gt; 3, 3, 4, 2, 2, 3, 1, 6, 5, 5, 3, 4, 1, 1, 2, 4, 4, 6, 5, 5, …\n$ N2        &lt;int&gt; 4, 3, 5, 5, 3, 5, 2, 3, 5, 5, 3, 5, 2, 1, 4, 5, 4, 5, 6, 5, …\n$ N3        &lt;int&gt; 2, 3, 4, 2, 4, 2, 2, 2, 2, 5, 4, 3, 2, 1, 2, 4, 4, 5, 5, 5, …\n$ N4        &lt;int&gt; 2, 5, 2, 4, 4, 2, 1, 6, 3, 2, 2, 2, 2, 2, 2, 5, 4, 4, 5, 1, …\n$ N5        &lt;int&gt; 3, 5, 3, 1, 3, 3, 1, 4, 3, 4, 3, NA, 2, 1, 3, 5, 5, 4, 2, 1,…\n$ O1        &lt;int&gt; 3, 4, 4, 3, 3, 4, 5, 3, 6, 5, 5, 4, 4, 5, 5, 6, 5, 5, 4, 4, …\n$ O2        &lt;int&gt; 6, 2, 2, 3, 3, 3, 2, 2, 6, 1, 3, 6, 2, 3, 2, 6, 1, 1, 2, 1, …\n$ O3        &lt;int&gt; 3, 4, 5, 4, 4, 5, 5, 4, 6, 5, 5, 4, 4, 4, 5, 6, 5, 4, 2, 5, …\n$ O4        &lt;int&gt; 4, 3, 5, 3, 3, 6, 6, 5, 6, 5, 6, 5, 5, 4, 5, 3, 6, 5, 4, 3, …\n$ O5        &lt;int&gt; 3, 3, 2, 5, 3, 1, 1, 3, 1, 2, 3, 4, 2, 4, 5, 2, 3, 4, 2, 2, …\n$ gender    &lt;int&gt; 1, 2, 2, 2, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 2, 2, …\n$ education &lt;int&gt; NA, NA, NA, NA, NA, 3, NA, 2, 1, NA, 1, NA, NA, NA, 1, NA, N…\n$ age       &lt;int&gt; 16, 18, 17, 17, 17, 21, 18, 19, 19, 17, 21, 16, 16, 16, 17, …\n\n\n\n\n\nHere we’ll add the sum scores for the Extroversion and Neuroticism scales to the data file.\n\nbfi &lt;- bfi %&gt;% \n  mutate(e = E1 + E2 + E3 + E4 + E5,\n         n = N1 + N2 + N3 + N4 + N5)\n\n\n\n\nWe can make a scatter plot of the Extroversion and Neuroticism sum scores.\n\nbfi %&gt;% \n  drop_na(n, e) %&gt;% \n  ggplot(aes(x = n, y = e, color = gender)) +\n  geom_jitter(width = 0.25, height = 0.25, size = 0.5) +\n  scale_color_viridis_c(option = \"C\", begin = 0.2, end = 0.6, breaks = NULL) +\n  labs(x = \"Neuroticism\", y = \"Extroversion\") +\n  facet_wrap(~ gender, labeller = label_both)"
+  },
+  {
+    "objectID": "blog/2025-04-01-second-blog/index.html#introduction",
+    "href": "blog/2025-04-01-second-blog/index.html#introduction",
+    "title": "Second blog",
+    "section": "",
+    "text": "In this second blog post, I’ll make a figure in R.\n\n\nLoad the tidyverse package for data wrangling, and the psych package for the data.\n\nlibrary(tidyverse)\nlibrary(psych)\n\nWe’ll use the bfi data set from the psych package. We can look at those data with the glimpse() function.\n\nglimpse(bfi)\n\nRows: 2,800\nColumns: 28\n$ A1        &lt;int&gt; 2, 2, 5, 4, 2, 6, 2, 4, 4, 2, 4, 2, 5, 5, 4, 4, 4, 5, 4, 4, …\n$ A2        &lt;int&gt; 4, 4, 4, 4, 3, 6, 5, 3, 3, 5, 4, 5, 5, 5, 5, 3, 6, 5, 4, 4, …\n$ A3        &lt;int&gt; 3, 5, 5, 6, 3, 5, 5, 1, 6, 6, 5, 5, 5, 5, 2, 6, 6, 5, 5, 6, …\n$ A4        &lt;int&gt; 4, 2, 4, 5, 4, 6, 3, 5, 3, 6, 6, 5, 6, 6, 2, 6, 2, 4, 4, 5, …\n$ A5        &lt;int&gt; 4, 5, 4, 5, 5, 5, 5, 1, 3, 5, 5, 5, 4, 6, 1, 3, 5, 5, 3, 5, …\n$ C1        &lt;int&gt; 2, 5, 4, 4, 4, 6, 5, 3, 6, 6, 4, 5, 5, 4, 5, 5, 4, 5, 5, 1, …\n$ C2        &lt;int&gt; 3, 4, 5, 4, 4, 6, 4, 2, 6, 5, 3, 4, 4, 4, 5, 5, 4, 5, 4, 1, …\n$ C3        &lt;int&gt; 3, 4, 4, 3, 5, 6, 4, 4, 3, 6, 5, 5, 3, 4, 5, 5, 4, 5, 5, 1, …\n$ C4        &lt;int&gt; 4, 3, 2, 5, 3, 1, 2, 2, 4, 2, 3, 4, 2, 2, 2, 3, 4, 4, 4, 5, …\n$ C5        &lt;int&gt; 4, 4, 5, 5, 2, 3, 3, 4, 5, 1, 2, 5, 2, 1, 2, 5, 4, 3, 6, 6, …\n$ E1        &lt;int&gt; 3, 1, 2, 5, 2, 2, 4, 3, 5, 2, 1, 3, 3, 2, 3, 1, 1, 2, 1, 1, …\n$ E2        &lt;int&gt; 3, 1, 4, 3, 2, 1, 3, 6, 3, 2, 3, 3, 3, 2, 4, 1, 2, 2, 2, 1, …\n$ E3        &lt;int&gt; 3, 6, 4, 4, 5, 6, 4, 4, NA, 4, 2, 4, 3, 4, 3, 6, 5, 4, 4, 4,…\n$ E4        &lt;int&gt; 4, 4, 4, 4, 4, 5, 5, 2, 4, 5, 5, 5, 2, 6, 6, 6, 5, 6, 5, 5, …\n$ E5        &lt;int&gt; 4, 3, 5, 4, 5, 6, 5, 1, 3, 5, 4, 4, 4, 5, 5, 4, 5, 6, 5, 6, …\n$ N1        &lt;int&gt; 3, 3, 4, 2, 2, 3, 1, 6, 5, 5, 3, 4, 1, 1, 2, 4, 4, 6, 5, 5, …\n$ N2        &lt;int&gt; 4, 3, 5, 5, 3, 5, 2, 3, 5, 5, 3, 5, 2, 1, 4, 5, 4, 5, 6, 5, …\n$ N3        &lt;int&gt; 2, 3, 4, 2, 4, 2, 2, 2, 2, 5, 4, 3, 2, 1, 2, 4, 4, 5, 5, 5, …\n$ N4        &lt;int&gt; 2, 5, 2, 4, 4, 2, 1, 6, 3, 2, 2, 2, 2, 2, 2, 5, 4, 4, 5, 1, …\n$ N5        &lt;int&gt; 3, 5, 3, 1, 3, 3, 1, 4, 3, 4, 3, NA, 2, 1, 3, 5, 5, 4, 2, 1,…\n$ O1        &lt;int&gt; 3, 4, 4, 3, 3, 4, 5, 3, 6, 5, 5, 4, 4, 5, 5, 6, 5, 5, 4, 4, …\n$ O2        &lt;int&gt; 6, 2, 2, 3, 3, 3, 2, 2, 6, 1, 3, 6, 2, 3, 2, 6, 1, 1, 2, 1, …\n$ O3        &lt;int&gt; 3, 4, 5, 4, 4, 5, 5, 4, 6, 5, 5, 4, 4, 4, 5, 6, 5, 4, 2, 5, …\n$ O4        &lt;int&gt; 4, 3, 5, 3, 3, 6, 6, 5, 6, 5, 6, 5, 5, 4, 5, 3, 6, 5, 4, 3, …\n$ O5        &lt;int&gt; 3, 3, 2, 5, 3, 1, 1, 3, 1, 2, 3, 4, 2, 4, 5, 2, 3, 4, 2, 2, …\n$ gender    &lt;int&gt; 1, 2, 2, 2, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 2, 2, …\n$ education &lt;int&gt; NA, NA, NA, NA, NA, 3, NA, 2, 1, NA, 1, NA, NA, NA, 1, NA, N…\n$ age       &lt;int&gt; 16, 18, 17, 17, 17, 21, 18, 19, 19, 17, 21, 16, 16, 16, 17, …\n\n\n\n\n\nHere we’ll add the sum scores for the Extroversion and Neuroticism scales to the data file.\n\nbfi &lt;- bfi %&gt;% \n  mutate(e = E1 + E2 + E3 + E4 + E5,\n         n = N1 + N2 + N3 + N4 + N5)\n\n\n\n\nWe can make a scatter plot of the Extroversion and Neuroticism sum scores.\n\nbfi %&gt;% \n  drop_na(n, e) %&gt;% \n  ggplot(aes(x = n, y = e, color = gender)) +\n  geom_jitter(width = 0.25, height = 0.25, size = 0.5) +\n  scale_color_viridis_c(option = \"C\", begin = 0.2, end = 0.6, breaks = NULL) +\n  labs(x = \"Neuroticism\", y = \"Extroversion\") +\n  facet_wrap(~ gender, labeller = label_both)"
+  },
+  {
+    "objectID": "blog/2025-04-01-second-blog/index.html#correlations",
+    "href": "blog/2025-04-01-second-blog/index.html#correlations",
+    "title": "Second blog",
+    "section": "Correlations",
+    "text": "Correlations\nWere you curious about the correlations? Here they are by gender.\n\nbfi %&gt;% \n  drop_na(n, e) %&gt;% \n  group_by(gender) %&gt;% \n  summarise(r = cor(e, n))\n\n# A tibble: 2 × 2\n  gender      r\n   &lt;int&gt;  &lt;dbl&gt;\n1      1 0.0349\n2      2 0.0428\n\n\nHere is the overall correlation.\n\nbfi %&gt;% \n  drop_na(n, e) %&gt;% \n  summarise(r = cor(e, n))\n\n           r\n1 0.03845235"
+  },
+  {
+    "objectID": "blog/2025-04-01-second-blog/index.html#session-information",
+    "href": "blog/2025-04-01-second-blog/index.html#session-information",
+    "title": "Second blog",
+    "section": "Session information",
+    "text": "Session information\nTo make the results reproducible, here is my sesssion information.\n\nsessionInfo()\n\nR version 4.4.3 (2025-02-28)\nPlatform: aarch64-apple-darwin20\nRunning under: macOS Ventura 13.4\n\nMatrix products: default\nBLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib \nLAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0\n\nlocale:\n[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n [1] psych_2.4.6.26  lubridate_1.9.3 forcats_1.0.0   stringr_1.5.1  \n [5] dplyr_1.1.4     purrr_1.0.4     readr_2.1.5     tidyr_1.3.1    \n [9] tibble_3.2.1    ggplot2_3.5.1   tidyverse_2.0.0\n\nloaded via a namespace (and not attached):\n [1] gtable_0.3.6      jsonlite_1.8.9    compiler_4.4.3    tidyselect_1.2.1 \n [5] parallel_4.4.3    scales_1.3.0      yaml_2.3.8        fastmap_1.1.1    \n [9] lattice_0.22-6    R6_2.6.1          labeling_0.4.3    generics_0.1.3   \n[13] knitr_1.49        htmlwidgets_1.6.4 munsell_0.5.1     pillar_1.10.1    \n[17] tzdb_0.4.0        rlang_1.1.5       stringi_1.8.4     xfun_0.49        \n[21] viridisLite_0.4.2 timechange_0.3.0  cli_3.6.4         withr_3.0.2      \n[25] magrittr_2.0.3    digest_0.6.37     grid_4.4.3        rstudioapi_0.16.0\n[29] hms_1.1.3         nlme_3.1-167      lifecycle_1.0.4   vctrs_0.6.5      \n[33] mnormt_2.1.1      evaluate_1.0.1    glue_1.8.0        farver_2.1.2     \n[37] colorspace_2.1-1  rmarkdown_2.29    tools_4.4.3       pkgconfig_2.0.3  \n[41] htmltools_0.5.8.1"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "A. Solomon Kurz",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "I am a full-time research psychologist, with a doctorate in clinical psychology from the University of Mississippi in 2018. My main gig is as a researcher and statistics/methods consultant at the VISN 17 Center of Excellence.\nIt’s been a minute, but I am also trained as a therapist. My primary therapeutic orientations are ACT and mindfulness-based interventions. I have had additional focused training in the areas of trauma and substance use.\nI also spend a lot of time making tutorial material on applied statistics, particularly from with the R computing framework."
   }
 ]
