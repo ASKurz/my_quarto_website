@@ -1,5 +1,9 @@
 ---
 title: "A. Solomon Kurz"
+subtitle: "Psychologist"
+image: pears.jpg
+about:
+  template: marquee
 ---
 
 Welcome to my website.
