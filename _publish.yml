@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 43c4405b-2761-48e7-b8c0-f649f83274cf
+      url: 'https://solomon.quarto.pub/website'
