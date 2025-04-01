@@ -1,0 +1,36 @@
+---
+title: "Hello World!"
+author: A. Solomon Kurz
+description: "This is my first blog post!"
+image: congratulations_icon.png
+categories:
+  - LaTeX
+  - YouTube
+---
+
+This is my first blog post! 🎉
+
+It has a section header:
+
+## This is a section header
+
+It has equations:
+
+$$y = mx + b$$
+
+It has a [hyperlink](https://quarto.org/docs/websites/).
+
+It has an embedded YouTube video.
+
+```{r}
+#| echo: false
+#| message: false
+
+vembedr::use_align(
+  vembedr::embed_url("https://youtu.be/l7r24gTEkEY?si=K2uL7XOTeZ_ObmCV"), 
+  "center")
+```
+
+And it even has an image imported from a `.jpg` file.
+
+![Figure 1. Solomon at 3](Solomon_at_3.jpg){fig-align="left" width="3in"}

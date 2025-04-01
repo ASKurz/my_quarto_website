@@ -1,0 +1,8 @@
+---
+title: "My blog"
+listing: 
+  contents: blog
+  type: grid
+  categories: true
+---
+

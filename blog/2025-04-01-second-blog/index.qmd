@@ -1,0 +1,102 @@
+---
+title: "Second blog"
+author: A. Solomon Kurz
+date: today
+description: "In my second blog post, I'll make a plot."
+image: featured-2.png
+categories:
+  - R
+  - code
+  - personality
+---
+
+## Introduction
+
+In this second blog post, I'll make a figure in R.
+
+### Data
+
+Load the tidyverse package for data wrangling, and the psych package for the data.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(psych)
+```
+
+We'll use the `bfi` data set from the psych package. We can look at those data with the `glimpse()` function.
+
+```{r}
+glimpse(bfi)
+```
+
+### Sum scores
+
+Here we'll add the sum scores for the Extroversion and Neuroticism scales to the data file.
+
+```{r}
+bfi <- bfi %>% 
+  mutate(e = E1 + E2 + E3 + E4 + E5,
+         n = N1 + N2 + N3 + N4 + N5)
+```         
+
+### Figure
+
+We can make a scatter plot of the Extroversion and Neuroticism sum scores.
+
+```{r}
+bfi %>% 
+  drop_na(n, e) %>% 
+  ggplot(aes(x = n, y = e, color = gender)) +
+  geom_jitter(width = 0.25, height = 0.25, size = 0.5) +
+  scale_color_viridis_c(option = "C", begin = 0.2, end = 0.6, breaks = NULL) +
+  labs(x = "Neuroticism", y = "Extroversion") +
+  facet_wrap(~ gender, labeller = label_both)
+```
+
+## Correlations
+
+Were you curious about the correlations? Here they are by `gender`.
+
+```{r}
+bfi %>% 
+  drop_na(n, e) %>% 
+  group_by(gender) %>% 
+  summarise(r = cor(e, n))
+```
+
+Here is the overall correlation.
+
+```{r}
+bfi %>% 
+  drop_na(n, e) %>% 
+  summarise(r = cor(e, n))
+```
+
+## Session information
+
+To make the results reproducible, here is my sesssion information.
+
+```{r}
+sessionInfo()
+```
+
+```{r}
+#| echo: false
+#| eval: false
+
+# Here is where I make the picture for the `image`
+ggplot() +
+  annotate(geom = "point",
+           x = 0, y = 0, 
+           color = "lightblue1", size = 50) +
+  annotate(geom = "text",
+           x = 0, y = 0, label = 2, 
+           color = "blue3", size = 30) +
+  theme_void()
+
+ggsave("featured-2.png", width = 3, height = 3)
+```
+
